@@ -16,13 +16,13 @@ install:
  - sudo apt-get -y install libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev
  - sudo apt-get -y install libpq-dev libsasl2-dev python-dev libldap2-dev libssl-dev
  - sudo apt-get -y install pkg-config libpng-dev libjpeg8-dev libfreetype6-dev
- - sudo apt-get -y install libffi-devprod
+ - sudo apt-get -y install libffi-dev
  - sudo pip install setuptools==34.0.2
  - sudo pip install pypandoc suds pysftp suds_requests distribute
 
 script:
  - cd /opt/odoo
- - sudo -H -u odoo bash -c "git init"
+ - sudo -H -u odoo bash -c "git init"prod
  - sudo -H -u odoo bash -c "git remote add origin https://github.com/Eficent/medical-spain-buildout.git"
  - sudo -H -u odoo bash -c "git fetch origin"
  - sudo -H -u odoo bash -c "git pull origin 10.0"
