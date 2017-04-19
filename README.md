@@ -30,23 +30,22 @@ The following directory structure will be created
 
 Bash
 
-Ordoo
-├── bin
-├── bootstrap.py
-├── buildout.cfg
-├── default.cfg
-├── develop-eggs
-├── downloads
-├── eggs
-├──
-├── nfe_xmlpassword
-├── parts
-├── Scenario
-├── specific-parts
-├── src
-├── upgrade.py
-├── README.md
-└── var
+Odoo
+> bin
+> bootstrap.py
+> buildout.cfg
+> default.cfg
+> develop-eggs
+> downloads
+> eggs
+> nfe_xml└── 
+> parts
+> Scenario
+> specific-parts
+> src
+> upgrade.py
+> README.md
+> var
 
 Install the dependencies of some Python libs that Odoo uses. If they are not installed, the buildout will fail.
 
