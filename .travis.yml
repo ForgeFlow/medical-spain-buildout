@@ -22,7 +22,7 @@ install:
 
 script:
  - cd /opt/odoo
- - sudo -H -u odoo bash -c "git init"prod
+ - sudo -H -u odoo bash -c "git init"
  - sudo -H -u odoo bash -c "git remote add origin https://github.com/Eficent/medical-spain-buildout.git"
  - sudo -H -u odoo bash -c "git fetch origin"
  - sudo -H -u odoo bash -c "git pull origin 10.0"
