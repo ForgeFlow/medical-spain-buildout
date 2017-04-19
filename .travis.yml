@@ -3,7 +3,7 @@ Language : bash
 Sudo : required
 Dist : xenial
 
-Install :
+Install :prod
 - sudo adduser --system --home = / opt / odoo --group odoo
 - sudo apt-get -y install git git-core tig
 - sudo apt-get -y install libxml2-dev libxslt-dev libevent-dev nodejs npm
@@ -13,7 +13,7 @@ Install :
 - sudo apt-get -y install build-essential checkinstall cdbs devscripts dh-make make fakeroot libxml-parser-perl check avahi-daemon curl g ++
 - sudo apt-get -y install python-dev python-pip libffi-dev
 - sudo apt-get -y install xmlsec1 openssl python-lxml libxmlsec1 libxmlsec1-dev
-- sudo apt-get -y install libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev
+- sudo apt-get -y install libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-devprod
 - sudo apt-get -y install libpq-dev libsasl2-dev python-dev libldap2-dev libssl-dev
 - sudo apt-get -y install pkg-config libpng-dev libjpeg8-dev libfreetype6-dev
 - sudo apt-get -y install libffi-dev
@@ -32,4 +32,4 @@ Script :
 - sudo -H -o odoo bash -c "rm -rf parts eggs src"
 - sudo -H -u odoo bash -c "python bootstrap.py"
   - sudo sed -i -e ": git@github.com \ :: https \: \ / \ / github.com \ /: g" buildout.cfg
-- sudo -H -o odoo bash -c "bin / buildout -c buildout.prod.cfg"
+- sudo -H -o odoo bash -c "bin / buildout -c buildout.dev.cfg"
