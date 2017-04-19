@@ -31,25 +31,25 @@ The following directory structure will be created
 Bash
 
 Odoo
-> bin
-> bootstrap.py
-> buildout.cfg
-> default.cfg
-> develop-eggs
-> downloads
-> eggs
-> nfe_xml└── 
-> parts
-> Scenario
-> specific-parts
-> src
-> upgrade.py
-> README.md
-> var
+* bin
+* bootstrap.py
+* buildout.cfg
+* default.cfg
+* develop-eggs
+* downloads
+* eggs
+* nfe_xml
+* parts
+* Scenario
+* specific-parts
+* src
+* upgrade.py
+* README.md
+* var
 
 Install the dependencies of some Python libs that Odoo uses. If they are not installed, the buildout will fail.
 
-> sudo apt-get -y install build-essential checkinstall cdbs devscripts dh-make make fakeroot libxml-parser-perl check avahi-daemon curl vim g ++ python-setuptools python-pip python-dev xmlsec1 openssl python-lxml libxmlsec1 libxmlsec1-dev libjpeg -dev libfreetype6-dev zlib1g-dev libpng12-dev python-suds libpq-dev libsasl2-dev python-dev libldap2-dev libssl-dev pkg-config libpng-dev libjpeg8-dev libfreetype6-dev
+> sudo apt-get -y install build-essential checkinstall cdbs devscripts dh-make make fakeroot libxml-parser-perl check avahi-daemon curl vim g++ python-setuptools python-pip python-dev xmlsec1 openssl python-lxml libxmlsec1 libxmlsec1-dev libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-0 python-suds libpq-dev libsasl2-dev python-dev libldap2-dev libssl-dev pkg-config libpng-dev libjpeg8-dev libfreetype6-dev
 
 Now run the Odoo installation with the command
 
