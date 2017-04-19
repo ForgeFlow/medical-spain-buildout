@@ -27,6 +27,7 @@ script:
  - sudo -H -u odoo bash -c "git fetch origin"
  - sudo -H -u odoo bash -c "git pull origin 10.0"
  - sudo -H -u odoo bash -c "python bootstrap.py"
+ - sudo -H -u odoo bash -c "rm -rf parts eggs src anybox.recipe.odoo"
  - sudo sed -i -e "s:git@github.com\::https\:\/\/github.com\/:g" buildout.cfg
  - sudo -H -u odoo bash -c "bin/buildout -c buildout.dev.cfg"
 
