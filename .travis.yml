@@ -29,8 +29,5 @@ script:
  - sudo -H -u odoo bash -c "python bootstrap.py"
  - sudo sed -i -e "s:git@github.com\::https\:\/\/github.com\/:g" buildout.cfg
  - sudo -H -u odoo bash -c "bin/buildout -c buildout.dev.cfg"
- - sudo -H -u odoo bash -c "rm -rf parts eggs src"
- - sudo -H -u odoo bash -c "python bootstrap.py"
-  - sudo sed -i -e "s:git@github.com\::https\:\/\/github.com\/:g" buildout.cfg
- - sudo -H -u odoo bash -c "bin/buildout -c buildout.dev.cfg"
+
 
