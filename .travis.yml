@@ -1,0 +1,35 @@
+Language : bash
+
+Sudo : required
+Dist : xenial
+
+Install :
+- sudo adduser --system --home = / opt / odoo --group odoo
+- sudo apt-get -y install git git-core tig
+- sudo apt-get -y install libxml2-dev libxslt-dev libevent-dev nodejs npm
+- sudo apt-get -y install python-libxml2 python-openssl python-cffi
+- sudo apt-get -y install pandoc
+- sudo apt-get -y install fontconfig libx11-6 libxext6 libxrender1 libjpeg-turbo8 libfbclient2
+- sudo apt-get -y install build-essential checkinstall cdbs devscripts dh-make make fakeroot libxml-parser-perl check avahi-daemon curl g ++
+- sudo apt-get -y install python-dev python-pip libffi-dev
+- sudo apt-get -y install xmlsec1 openssl python-lxml libxmlsec1 libxmlsec1-dev
+- sudo apt-get -y install libjpeg-dev libfreetype6-dev zlib1g-dev libpng12-dev
+- sudo apt-get -y install libpq-dev libsasl2-dev python-dev libldap2-dev libssl-dev
+- sudo apt-get -y install pkg-config libpng-dev libjpeg8-dev libfreetype6-dev
+- sudo apt-get -y install libffi-dev
+- sudo pip install setuptools == 34.0.2
+- sudo pip install pypandoc suds pysftp suds_requests distribute
+
+Script :
+- cd / opt / odoo
+- sudo -H -u odoo bash -c "git init"
+- sudo -H -u odoo bash -c "git remote add origin https://github.com/Eficent/medical-spain-buildout.git"
+- sudo -H -u odoo bash -c "git fetch origin"
+- sudo -H -o odoo bash -c "git pull origin 10.0"
+- sudo -H -u odoo bash -c "python bootstrap.py"
+- sudo sed -i -e ": git@github.com \ :: https \: \ / \ / github.com \ /: g" buildout.cfg
+- sudo -H -o odoo bash -c "bin / buildout -c buildout.dev.cfg"
+- sudo -H -o odoo bash -c "rm -rf parts eggs src"
+- sudo -H -u odoo bash -c "python bootstrap.py"
+  - sudo sed -i -e ": git@github.com \ :: https \: \ / \ / github.com \ /: g" buildout.cfg
+- sudo -H -o odoo bash -c "bin / buildout -c buildout.prod.cfg"
