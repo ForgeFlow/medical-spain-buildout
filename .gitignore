@@ -5,6 +5,7 @@ build/
 develop-eggs/
 eggs/
 parts/
+etc/
 python*/
 *.pyc
 *.egg
